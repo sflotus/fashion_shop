@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 import org.arthur.fashion_shop.model.main_model.Product;
 
 @Entity
-public class ClothingType {
+public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private  String name;
-    public ClothingType() {
+    private String url;
+
+    public Image() {
     }
 
     public Long getId() {
@@ -20,11 +21,11 @@ public class ClothingType {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUrl() {
+        return url;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

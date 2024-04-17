@@ -1,12 +1,9 @@
 package org.arthur.fashion_shop.model.main_model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 
 
-@MappedSuperclass
+@Entity
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +13,15 @@ public class Product {
     private String description;
     private String material;
     private String origin;
+    private Boolean target;
+
+    public Boolean getTarget() {
+        return target;
+    }
+
+    public void setTarget(Boolean target) {
+        this.target = target;
+    }
 
     public Product() {
     }
